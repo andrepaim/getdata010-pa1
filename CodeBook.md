@@ -1,4 +1,4 @@
-# Data Dictionary - Human Activity Recognition Using Smartphones Data Set 
+## Data Dictionary - Human Activity Recognition Using Smartphones Data Set 
 
 **subject.id**
 
