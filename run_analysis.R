@@ -1,6 +1,6 @@
 library(dplyr)
 
-# Donwload and unzip file if the data directory does not exist
+# Download and unzip file if the data directory does not exist
 if (!file.exists('UCI HAR Dataset'))
 {
 	download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip', 
@@ -55,5 +55,7 @@ data$activity <- activity.labels[data$activity, 2]
 # of each variable for each activity and each subject.
 by.subject.activity <- group_by(data, subject, activity)
 tidy.data <- summarise_each(by.subject.activity, funs(mean))
+
+# Save the resulting dataset as a txt file
 write.table(tidy.data, 'tidy_dataset.txt', row.name=FALSE)
 
