@@ -1,4 +1,4 @@
-# Script Description
+## Script Description
 
 In order to create the requested tidy dataset, the following steps
 are performed by the *run\_analysis.R* script:
@@ -42,3 +42,7 @@ average of each variable for each activity and each subject. First, the
 Next, the *dplyr::summarise_each* function is used to generate the final tidy
 dataset containing the mean value of each feature for each subject and each
 activity
+
+## Dataset Description
+
+The code book for the resulting dataset can be found in the CodeBook.md file.
