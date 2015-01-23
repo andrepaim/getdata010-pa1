@@ -1,7 +1,7 @@
 # Script Description
 
 In order to create the requested tidy dataset, the following steps
-are performed:
+are performed by the *run\_analysis.R* script:
 
 1. Checks if the Samsung dataset is in the working directory. If not,
 downloads the dataset and unzips it.
@@ -21,9 +21,10 @@ for the train and test data are merged using the *rbind* function.
 5. Appropriately labels the data set with descriptive variable names. The first
 column representing the subject ids is named as *subject*. The last column representing
 the corresponding output is named as *activity*. The remaining columns are
-renamed using the corresponding feature names loaded in the step 3. However, the
-following characters are replaced by '\_' to improve readability: ')', '(', '-', and ','. 
-This last step is performed using the *gsub* function.
+renamed using the corresponding feature names loaded in the step 3. However, 
+more readable names were defined using regular expressions, (gsub function),  
+replacing some abbreviations with more readable descriptions. For instance, *fBody*
+was replaced by *frequency.domain.body*.
 
 6. Extracts only the measurements on the mean and standard deviation for each measurement.
 The *grep* function is used to create an index vector of the feature columns with names 
@@ -41,8 +42,3 @@ average of each variable for each activity and each subject. First, the
 Next, the *dplyr::summarise_each* function is used to generate the final tidy
 dataset containing the mean value of each feature for each subject and each
 activity
-
-# Dataset Description
-
-
-

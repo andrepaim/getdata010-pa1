@@ -10,10 +10,10 @@ if (!file.exists('UCI HAR Dataset'))
 
 # Load original datasets
 subject.id.train  <- read.table('UCI HAR Dataset/train/subject_train.txt')
-x.train  <- read.table('UCI HAR Dataset/train/X_train.txt')
+#x.train  <- read.table('UCI HAR Dataset/train/X_train.txt')
 y.train  <- read.table('UCI HAR Dataset/train/y_train.txt')
 subject.id.test  <- read.table('UCI HAR Dataset/test/subject_test.txt')
-x.test  <- read.table('UCI HAR Dataset/test/X_test.txt')
+#x.test  <- read.table('UCI HAR Dataset/test/X_test.txt')
 y.test  <- read.table('UCI HAR Dataset/test/y_test.txt')
 
 
@@ -31,13 +31,37 @@ data <- data.frame(subject_id = rbind(subject.id.train, subject.id.test),
                         activity = rbind(y.train, y.test))
 
 # Appropriately labels the data set with descriptive variable names
-names(data)[1] <- 'subject'
+names(data)[1] <- 'subject.id'
 for (i in 1:num.features)
 {
-  var.name <- gsub('-', '_',feature.labels[i, 2])
+  var.name <- gsub('-', '',feature.labels[i, 2])
+
   var.name <- gsub('\\(', '', var.name)
   var.name <- gsub('\\)', '', var.name)
-  var.name <- gsub(',', '_', var.name)
+  var.name <- gsub(',', '.and.', var.name)
+
+	var.name <- gsub('tBody','time.domain.body.', var.name)
+	var.name <- gsub('fBody','frequency.domain.body.', var.name)
+	var.name <- gsub('tGravity','time.domain.gravity.', var.name)
+
+	var.name <- gsub('Acc','acceleration.', var.name)
+	var.name <- gsub('Gyro','gyroscope.', var.name)
+	var.name <- gsub('Jerk','jerk.', var.name)
+	var.name <- gsub('Mag','magnitude.', var.name)
+
+	var.name <- gsub('X','.x', var.name)
+	var.name <- gsub('Y','.y', var.name)
+	var.name <- gsub('Z','.z', var.name)
+
+  var.name <- gsub('meanFreq', 'mean.freq', var.name)
+  var.name <- gsub('gravityMean', 'gravity.mean', var.name)
+  var.name <- gsub('Body', 'body.', var.name)
+
+  var.name <- gsub('angle', 'angle.between.', var.name)
+	var.name <- gsub('Mean','mean.', var.name)
+
+	var.name <- gsub('\\.\\.','.', var.name)
+
   names(data)[(i+1)] <- var.name
 }
 names(data)[(num.features+2)] = 'activity'
@@ -53,7 +77,7 @@ data$activity <- activity.labels[data$activity, 2]
 
 # From the data set in step 4, creates a second, independent data set with the average 
 # of each variable for each activity and each subject.
-by.subject.activity <- group_by(data, subject, activity)
+by.subject.activity <- group_by(data, subject.id, activity)
 tidy.data <- summarise_each(by.subject.activity, funs(mean))
 
 # Save the resulting dataset as a txt file
