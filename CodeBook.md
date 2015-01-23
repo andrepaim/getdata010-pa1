@@ -1,93 +1,88 @@
 # Data Dictionary - Human Activity Recognition Using Smartphones Data Set 
 
-subject.id
+**subject.id**
 
-  Subject Identification
+  * Subject Identification
+  * Integer (1..10)
 
-  1..10 Integer
+**activity**
 
-activity
+  * Activity label
+  * String {LAYING, SITTING, STANDING, WALKING, WALKING\_DOWNSTAIRS, WALKING\_UPSTAIRS} 
 
-  Activity label
-  
-  {LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS} String
+**time.domain.body.acceleration.mean.x**
 
-time.domain.body.acceleration.mean.x
+  * Mean of the time domain body acceleration x component
+  * Double (m/s^2)
 
-  Mean of the time domain body acceleration x component
+**time.domain.body.acceleration.mean.y**
 
-  Double (m/s^2)
+  * Mean of the time domain body acceleration y component
+  * Double (m/s^2)
 
-time.domain.body.acceleration.mean.y
+**time.domain.body.acceleration.mean.z**
+  * Mean of the time domain body acceleration z component
+  * Double (m/s^2)
 
-  Mean of the time domain body acceleration y component
+**time.domain.body.acceleration.std.x**
+  * Standard deviation of the time domain body acceleration x component
+  * Double (m/s^2)
 
-  Double (m/s^2)
+**time.domain.body.acceleration.std.y**
+  * Standard deviation of the time domain body acceleration y component
+  * Double (m/s^2)
 
-time.domain.body.acceleration.mean.z
-  Mean of the time domain body acceleration z component
-  Double (m/s^2)
+**time.domain.body.acceleration.std.z**
+  * Standard deviation of the time domain body acceleration z component
+  * Double (m/s^2)
 
-time.domain.body.acceleration.std.x
-  Standard deviation of the time domain body acceleration x component
-  Double (m/s^2)
+**time.domain.gravity.acceleration.mean.x**
+  * Mean of the time domain gravity acceleration x component
+  * Double (m/s^2)
 
-time.domain.body.acceleration.std.y
-  Standard deviation of the time domain body acceleration y component
-  Double (m/s^2)
+**time.domain.gravity.acceleration.mean.y**
+  * Mean of the time domain gravity acceleration y component
+  * Double (m/s^2)
 
-time.domain.body.acceleration.std.z
-  Standard deviation of the time domain body acceleration z component
-  Double (m/s^2)
+**time.domain.gravity.acceleration.mean.z**
+  * Mean of the time domain gravity acceleration z component
+  * Double (m/s^2)
 
-time.domain.gravity.acceleration.mean.x
-  Mean of the time domain gravity acceleration x component
-  Double (m/s^2)
+**time.domain.gravity.acceleration.std.x**
+  * Standard deviation of the time domain gravity acceleration x component
+  * Double (m/s^2)
 
-time.domain.gravity.acceleration.mean.y
-  Mean of the time domain gravity acceleration y component
-  Double (m/s^2)
+**time.domain.gravity.acceleration.std.y**
+  * Standard deviation of the time domain gravity acceleration y component
+  * Double (m/s^2)
 
-time.domain.gravity.acceleration.mean.z
-  Mean of the time domain gravity acceleration z component
-  Double (m/s^2)
+**time.domain.gravity.acceleration.std.z**
+  * Standard deviation of the time domain gravity acceleration z component
+  * Double (m/s^2)
 
-time.domain.gravity.acceleration.std.x
-  Standard deviation of the time domain gravity acceleration x component
-  Double (m/s^2)
+**time.domain.body.acceleration.jerk.mean.x**
+  * Mean of the time domain body acceleration jerk signal x component
+  * Double (m/s^2)
 
-time.domain.gravity.acceleration.std.y
-  Standard deviation of the time domain gravity acceleration y component
-  Double (m/s^2)
+**time.domain.body.acceleration.jerk.mean.y**
+  * Mean of the time domain body acceleration jerk signal y component
+  * Double (m/s^2)
 
-time.domain.gravity.acceleration.std.z
-  Standard deviation of the time domain gravity acceleration z component
-  Double (m/s^2)
+**time.domain.body.acceleration.jerk.mean.z**
+  * Mean of the time domain body acceleration jerk signal z component
+  * Double (m/s^2)
 
-time.domain.body.acceleration.jerk.mean.x
-  Mean of the time domain body acceleration jerk signal x component
-  Double (m/s^2)
+**time.domain.body.acceleration.jerk.std.x**
+  * Standard deviation of the time domain body acceleration jerk signal x component
+  * Double (m/s^2)
 
-time.domain.body.acceleration.jerk.mean.y
-  Mean of the time domain body acceleration jerk signal y component
-  Double (m/s^2)
+**time.domain.body.acceleration.jerk.std.y**
+  * Standard deviation of the time domain body acceleration jerk signal y component
+  * Double (m/s^2)
 
-time.domain.body.acceleration.jerk.mean.z
-  Mean of the time domain body acceleration jerk signal z component
-  Double (m/s^2)
-
-
-time.domain.body.acceleration.jerk.std.x
-  Standard deviation of the time domain body acceleration jerk signal x component
-  Double (m/s^2)
-
-time.domain.body.acceleration.jerk.std.y
-  Standard deviation of the time domain body acceleration jerk signal y component
-  Double (m/s^2)
-
-time.domain.body.acceleration.jerk.std.z
-  Standard deviation of the time domain body acceleration jerk signal z component
-  Double (m/s^2)
+**time.domain.body.acceleration.jerk.std.z**
+  * Standard deviation of the time domain body acceleration jerk signal z component
+  * Double (m/s^2)
 
 
 time.domain.body.gyroscope.mean.x
