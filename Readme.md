@@ -20,19 +20,20 @@ for the train and test data are merged using the *rbind* function.
 
 5. Appropriately labels the data set with descriptive variable names. The first
 column representing the subject ids is named as *subject*. The last column representing
-the corresponding to the output is named as *activity*. The remaining columns are
+the corresponding output is named as *activity*. The remaining columns are
 renamed using the corresponding feature names loaded in the step 3. However, the
 following characters are replaced by '\_' to improve readability: ')', '(', '-', and ','. 
 This last step is performed using the *gsub* function.
 
-6. Extracts only the measurements on the man and standard deviation for each measurement.
+6. Extracts only the measurements on the mean and standard deviation for each measurement.
 The *grep* function is used to create an index vector of the feature columns with names 
 containing the words *mean* or *std* (ignoring case). Next, the dataset is filtered
 using the resulting index vector.
 
 7. Uses descriptive activity names to name the activities in the data set. The
 original *activity* column has indices which are used to extract the corresponding
-activities descriptions loaded in the activities labels dataset (step 3).
+activities descriptions loaded in the activities labels dataset (step 3). Theses
+indices are used to rename the rows of the *activity* column.
 
 8. From the dataset in step 7, creates a second, independent data set with the
 average of each variable for each activity and each subject. First, the 
@@ -41,7 +42,7 @@ Next, the *dplyr::summarise_each* function is used to generate the final tidy
 dataset containing the mean value of each feature for each subject and each
 activity
 
-# Dataset description
+# Dataset Description
 
 
 
