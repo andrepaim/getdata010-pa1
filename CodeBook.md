@@ -1,19 +1,27 @@
 # Data Dictionary - Human Activity Recognition Using Smartphones Data Set 
 
 subject.id
+
   Subject Identification
+
   1..10 Integer
 
 activity
+
   Activity label
+  
   {LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS} String
 
 time.domain.body.acceleration.mean.x
+
   Mean of the time domain body acceleration x component
+
   Double (m/s^2)
 
 time.domain.body.acceleration.mean.y
+
   Mean of the time domain body acceleration y component
+
   Double (m/s^2)
 
 time.domain.body.acceleration.mean.z
