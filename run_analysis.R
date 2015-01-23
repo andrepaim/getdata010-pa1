@@ -10,10 +10,10 @@ if (!file.exists('UCI HAR Dataset'))
 
 # Load original datasets
 subject.id.train  <- read.table('UCI HAR Dataset/train/subject_train.txt')
-#x.train  <- read.table('UCI HAR Dataset/train/X_train.txt')
+x.train  <- read.table('UCI HAR Dataset/train/X_train.txt')
 y.train  <- read.table('UCI HAR Dataset/train/y_train.txt')
 subject.id.test  <- read.table('UCI HAR Dataset/test/subject_test.txt')
-#x.test  <- read.table('UCI HAR Dataset/test/X_test.txt')
+x.test  <- read.table('UCI HAR Dataset/test/X_test.txt')
 y.test  <- read.table('UCI HAR Dataset/test/y_test.txt')
 
 
